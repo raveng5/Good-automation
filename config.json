@@ -1,0 +1,16 @@
+{
+  "app": {
+    "name": "auto_app",
+    "version": "0.0.0",
+    "installPath": "/opt/my-app"
+  },
+  "updates": {
+    "repositoryUrl": "https://github.com/raveng5/Good-automation.git",
+    "checkOnStartup": true,
+    "intervalHours": 24
+  },
+  "storage": {
+    "downloadPath": "/tmp/my-app-update",
+    "backupPath": "/opt/my-app-backup"
+  }
+}
