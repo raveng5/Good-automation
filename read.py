@@ -2,8 +2,14 @@
 import json
 class Read:
     @staticmethod
-    def idk()->None:
-        print("good")
+    def get_from(father:str,son:str)->None|str:
+        try:
+            with open("config.json", encoding="utf-8") as file:
+                config = json.load(file)
+            return config[father][son]
+
+        except Exception:
+            return None
 #load func
 # save func
 # i get an name of file that you want to inspect and u get it

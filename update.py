@@ -3,8 +3,19 @@ import os
 import subprocess
 from read import Read
 class Update:
-    def idk()->None:
-        print("also good")
+    @staticmethod
+    def uptodate(path:str)->bool:
+        try:
+            subprocess.run(
+                    ["git", "pull", "--ff-only"],
+                    cwd=path,
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                )
+            return True
+        except Exception:
+            return False
     #check for update
     # download will download the git clone
     # compare_files see if this file is good or outdated
