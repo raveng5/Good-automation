@@ -10,7 +10,8 @@
     "intervalHours": 24
   },
   "storage": {
-    "downloadPath": "/tmp/my-app-update",
-    "backupPath": "/opt/my-app-backup"
+    "downloadPath": "/home/ig/project-boot/webflyx",
+    "auto": "/home/ig/lastp",
+    "backup":"id/yet"
   }
 }

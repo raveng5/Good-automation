@@ -1,9 +1,13 @@
 #imports
-from logging import exception
+from logging import exception, fatal
 
 from read import Read
 from update import Update
 #main block
+
+
+
+
 
 def main()->None:
     try:
@@ -14,6 +18,8 @@ def main()->None:
         print(f"ok no errors but did it work? -> {res}")
     except Exception:
         print("sorry didn't work")
-main()
+
+if __name__ == "__main__":
+    main()
 # crate a spot in the pc that we will save and do evry thing there
 # clone the new thing and replace it with the new thing

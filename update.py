@@ -7,15 +7,23 @@ class Update:
     def uptodate(path:str)->bool:
         try:
             subprocess.run(
-                    ["git", "pull", "--ff-only"],
-                    cwd=path,
-                    check=True,
-                    capture_output=True,
-                    text=True,
-                )
+                ["git", "-C", path, "pull", "--ff-only", "origin", "main"],
+                check=True
+            )
             return True
         except Exception:
             return False
+
+
+
+
+    @staticmethod
+    def runpa(path: str) -> bool:
+          try:
+              subprocess.run(["sh", path], check=True)
+              return True
+          except (subprocess.CalledProcessError, OSError):
+              return False
     #check for update
     # download will download the git clone
     # compare_files see if this file is good or outdated

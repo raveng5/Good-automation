@@ -4,7 +4,7 @@ class Read:
     @staticmethod
     def get_from(father:str,son:str)->None|str:
         try:
-            with open("config.json", encoding="utf-8") as file:
+            with open("/home/ig/lastp/config.json", encoding="utf-8") as file:
                 config = json.load(file)
             return config[father][son]
 
